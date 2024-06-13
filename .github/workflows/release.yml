@@ -16,6 +16,9 @@ jobs:
           with:
               name: hello-world
 
+        - name: print github context
+          run: echo "${{ toJson(github) }}"
+
         - name: Upload Release Asset
           uses: actions/upload-release-asset@v1
           env:
